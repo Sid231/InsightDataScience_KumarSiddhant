@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.TreeMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class PharmacyCounting {
 			}
 			if(!indexMap.isEmpty() && line != null){
 				drugPrescriberMap = new HashMap<String,HashSet<String>>();
-				drugCostMap = new HashMap<String,Integer>();
+				drugCostMap = new TreeMap<String,Integer>();
 				while(line != null){
 					String[] lineArray = line.split(",");
 					String drugName = lineArray[indexMap.get("drug_name")];
